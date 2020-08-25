@@ -1,0 +1,10 @@
+;;; -*- coding: utf-8 -*-
+(("/home/foxxer/vector/src/lib.rs" . 276)
+ ("/home/foxxer/.emacs.d/elpa/toml-mode-20161107.1800/toml-mode-autoloads.el" . 635)
+ ("/home/foxxer/.emacs.d/init.el" . 744)
+ ("/home/foxxer/.emacs.d/elpa/flycheck-rust-20190319.1546/flycheck-rust-autoloads.el" . 630)
+ ("/home/foxxer/.emacs.d/elpa/yasnippet-20200604.246/yasnippet-autoloads.el" . 1966)
+ ("/home/foxxer/vector/"
+  (dired-filename . "/home/foxxer/vector/src"))
+ ("/home/foxxer/vector/src/"
+  (dired-filename . "/home/foxxer/vector/src/lib.rs")))

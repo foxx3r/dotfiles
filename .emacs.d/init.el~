@@ -1,0 +1,70 @@
+ (require 'package)
+(setq package-list '(haskell-mode helm doom-themes company))
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.milkbox.net/packages/"))
+(package-initialize)
+
+(if (not (package-installed-p 'use-package))
+  (progn
+    (package-refresh-contents)
+    (package-install 'use-package)))
+
+; activate all the packages (in particular autoloads)
+(package-initialize)
+
+; fetch the list of packages available 
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+(require 'use-package)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (spaceline smartparens lsp-mode evil auto-complete company helm haskell-mode doom-themes use-package))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(load-theme 'doom-challenger-deep t)
+(require 'helm-config)
+
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+
+(helm-mode 1)
+
+(when (version<= "26.0.50" emacs-version )
+  (global-display-line-numbers-mode))
+
+(defun auto-complete-mode-maybe ()
+  (unless (minibufferp (current-buffer))
+    (auto-complete-mode 1)))
+(auto-complete-mode-maybe)
+(auto-complete-mode)
+
+(require 'evil)
+(evil-mode 1)
+
+(require 'lsp)
+(require 'lsp-haskell)
+(add-hook 'haskell-mode-hook #'lsp)
+
+(smartparens-global-mode 1)
+
+(require 'spaceline-config)
+(spaceline-spacemacs-theme)
+
+(setq company-idle-delay nil)

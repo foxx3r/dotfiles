@@ -1,0 +1,40 @@
+:def hoogle \x -> return $ ":!hoogle \"" ++ x ++ "\""
+:def doc \x -> return $ ":!hoogle --info \"" ++ x ++ "\""
+:set prompt "λ "
+:set prompt-cont "∈ "
+:set +m
+:set +t
+:set -XOverloadedStrings
+:set -XOverloadedLists
+:set -XLambdaCase
+:set -XRankNTypes
+:set -XTypeFamilies
+:set -XFunctionalDependencies
+:set -XGADTs
+:set -XPolyKinds
+:set -XDataKinds
+:set -XTypeOperators
+:set -XTypeInType
+:set -XTypeApplications
+:set -XNumDecimals
+:set -XDuplicateRecordFields
+:set -XNoMonomorphismRestriction
+:set -XRecursiveDo
+:set -XNamedFieldPuns
+:set -XRecordWildCards
+:set -XPostfixOperators
+:set -XViewPatterns
+:set -XPatternSynonyms
+:set -XTupleSections
+:set -XScopedTypeVariables
+:set -XBangPatterns
+:set -XFlexibleInstances
+:set -XFlexibleContexts
+type Type = *
+import Data.Text
+import Data.ByteString
+import Data.Array
+import Data.Set
+import Data.Map
+import GHC.Exts (Constraint)
+import Text.Printf
