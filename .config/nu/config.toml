@@ -1,0 +1,5 @@
+use_starship = true
+startup = ["alias cat  [file] { bat --paging=never $file }", "alias ls  [dir] { exa -G --icons -a -s type $dir }"]
+completion_mode = "list"
+edit_mode = "emacs"
+header_align = "center"

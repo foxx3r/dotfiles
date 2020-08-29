@@ -1,0 +1,200 @@
+# ~/.config/starship.toml
+add_newline = true
+
+[character]
+use_symbol_for_status = true  # Show "✖" when the command faild
+symbol = "➜ "
+style_success = "bold green"
+style_failure = "bold red"
+disabled = false
+
+[directory]
+truncation_length = 5
+prefix = "in "
+
+[docker_context]
+symbol = "🐋 "
+style = "bold blue"
+only_with_files = false
+disabled = false
+
+[elixir]
+symbol = "🔮 "
+style = "bold purple"
+
+[elm]
+symbol = " "
+style = "bold cyan"
+disabled = false
+
+[erlang]
+symbol = "🖧 "
+style = "bold red"
+disabled = false
+
+[git_branch]
+symbol = " "
+truncation_symbol = ""
+style = "bold yellow"
+
+[git_state]
+progress_divider = " of "
+
+[git_commit]
+only_detached = true
+prefix = "("
+suffix = ")"
+style = "bold green"
+commit_hash_length = 7
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 "
+behind = "🐢 "
+diverged = "🔱 "
+untracked = "🛤️  ×"
+untracked_count.enabled = true
+stashed = "📦 "
+modified = "📝 ×"
+modified_count.enabled = true
+staged = "🗃️  ×"
+staged_count.enabled = true
+renamed = "📛 ×"
+renamed_count.enabled = true
+deleted = "🗑️  ×"
+deleted_count.enabled = true
+prefix = "["
+suffix = "]"
+style = "bright-white"
+
+[golang]
+symbol = "🐹 "
+style = "bold cyan"
+disabled = false
+
+[hostname]
+ssh_only = false
+prefix = "«"
+suffix = "»"
+trim_at = "-"
+style = "bold dimmed white"
+disabled = false
+
+[java]
+symbol = "☕ "
+style = "dimmed red"
+disabled = false
+
+[jobs]
+symbol = "✦ "
+disabled = false
+
+[julia]
+symbol = "ஃ "
+style = "bold purple"
+disabled = false
+
+[kubernetes]
+symbol = "⛵ "
+style = "dimmed green"
+disabled = false
+
+[kubernetes.context_aliases]
+"dev.local.cluster.k8s" = "dev"
+
+[memory_usage]
+show_percentage = true
+show_swap = true
+style = "bold dimmed white"
+disabled = false
+
+[nim]
+symbol = "👑 "
+style = "bold yellow"
+disabled = false
+
+[nix_shell]
+symbol = "❄️ "
+use_name = true
+impure_msg = "impure"
+pure_msg = "pure"
+disabled = false
+
+[nodejs]
+symbol = "⬢ "
+style = "bold green"
+disabled = false
+
+[package]
+symbol = "📦 "
+style = "bold 208"
+display_private = true
+disabled = false
+
+[ocaml]
+symbol = "🐪 "
+style = "bold yellow"
+disabled = false
+
+[php]
+symbol = "🐘 "
+style = "bold 147"
+disabled = false
+
+[python]
+symbol = "🐍 "
+pyenv_version_name = true
+pyenv_prefix = "pyenv "
+scan_for_pyfiles = true
+style = "bold blue"
+disabled = false
+
+[ruby]
+symbol = "💎 "
+style = "bold red"
+disabled = false
+
+[rust]
+symbol = "🦀"
+style = "bold orange"
+disabled = false
+
+[singularity]
+symbol = "📦 "
+label = ""
+prefix = "["
+suffix = "]"
+style = "bold dimmed blue"
+disabled = false
+
+[terraform]
+symbol = "💠 "
+show_version = false
+style = "bold 105"
+disabled = false
+
+[time]
+format = "🕙 %T"
+use_12hr = true
+style = "bright-white"
+disabled = false
+
+[username]
+style_root = "bold red"
+style_user = "bold dimmed blue"
+show_always = true
+disabled = false
+
+[zig]
+symbol = "⚡️ "
+style = "bold yellow"
+disabled = false
+
+[aws]
+style = "bold blue"
+symbol = "🅰 "
+displayed_items = "region"
+
+[aws.region_aliases]
+ap-southeast-2 = "au"
+us-east-1 = "va"
